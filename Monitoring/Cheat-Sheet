@@ -28,5 +28,18 @@ run glances with:
 
 (base) bayram@mintBOX:~$ glances
 
+to start the glances web-interface you need to prepare the environment for ubuntu (18.04!):
+
+(base) bayram@mintBOX:~$ sudo apt install python-bottle
+
+(base) bayram@mintBOX:~$ sudo apt install python3-bottle
+
+and start the web-interface with:
+
+(base) bayram@mintBOX:~$ glances -w
+Glances web server started on http://0.0.0.0:61208/
+
+
+
 
 
