@@ -1,2 +1,3 @@
 # Linux
-My Solutions in Linux
+My Documentation and Solutions in Linux
+Enjoy!
