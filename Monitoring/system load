@@ -1,0 +1,55 @@
+Linux, Mac, and other Unix-like systems display “load average” numbers. These numbers tell you how busy your system’s CPU, disk, 
+and other resources are. They’re not self-explanatory at first, but it’s easy to become familiar with them.
+
+use:
+
+lscpu - display information about the CPU architecture
+
+vagrant@ubuntu-bionic:~$ lscpu
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              2
+On-line CPU(s) list: 0,1
+Thread(s) per core:  1
+Core(s) per socket:  2
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           AuthenticAMD
+CPU family:          21
+Model:               2
+Model name:          AMD FX(tm)-8320 Eight-Core Processor
+Stepping:            0
+CPU MHz:             3500.276
+BogoMIPS:            7000.55
+Hypervisor vendor:   KVM
+Virtualization type: full
+L1d cache:           16K
+L1i cache:           64K
+L2 cache:            2048K
+L3 cache:            8192K
+NUMA node0 CPU(s):   0,1
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 x2apic popcnt aes xsave avx hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd vmmcall arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold
+
+use:
+
+nproc - print the number of processing units available
+
+vagrant@ubuntu-bionic:~$ nproc
+2
+
+use:
+
+uptime - Tell how long the system has been running.
+
+vagrant@ubuntu-bionic:~$ uptime
+09:05:52 up 47 min,  1 user,  load average: 0.00, 0.01, 0.00
+ 
+and have a look into proc-filesystem
+
+vagrant@ubuntu-bionic:~$ cat /proc/loadavg
+0.00 0.00 0.00 1/115 11356
+
+
+
+
